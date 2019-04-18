@@ -56,9 +56,7 @@ td {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-.ajout {
-  margin-top: 50px;
+  margin-left: 20px;
 }
 #modifier {
   width: 400px;
@@ -89,4 +87,21 @@ td {
 #bouttonmodifier {
   margin-left: 50px;
   margin-top: 20px;
+}
+#ajout {
+  margin-top: 50px;
+}
+#bouttonajouter {
+  margin-left: 185px;
+}
+#nom {
+  margin-left: 90px;
+}
+#supprimer {
+  border:  2px solid rgb(46, 42, 42);
+  border-radius: 10px;
+  padding-left: 60px;
+  padding-top: 20px;
+  width: 300px;
+  height: 150px;
 }
