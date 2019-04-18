@@ -29,9 +29,13 @@ getList = () => {
 render() {
   const { list } = this.state;
 
-  return (
-    <div className="container">
-        <Ajouter/>
+  return (  
+        <div className="container">
+        <div className="flex-row">
+          <div className="flex-large">
+           <Ajouter/>
+          </div>
+        </div>
       <br/>
       <table className="table table-bordered">
         <thead className="thead-dark">
@@ -64,7 +68,7 @@ render() {
                                   <td><label>Nom :</label><input id="inputmodifiernom" type="text" name="nom" placeholder={item.nom}/></td>
                                </tr>
                                <tr>
-                                  <td> <label>Prenom :</label><input id="inputmodifierprenom" type="text" name="Prenom" placeholder={item.Prenom}/></td>
+                                  <td> <label>Prénom :</label><input id="inputmodifierprenom" type="text" name="Prenom" placeholder={item.Prenom}/></td>
                                </tr>                          
                             
                                   <input type="hidden" name="id" value={item.id}/>
@@ -86,7 +90,7 @@ render() {
                     confirmAlert({
                      customUI: ({ onClose }) => {
                        return (
-                         <div className='custom-ui'>
+                         <div className='custom-ui' id="supprimer">
                            <form method="POST" action="http://localhost:8080/list?_method=DELETE" enctype="application/x-www-form-urlencoded">
                              <input type="hidden" name="_method" value="DELETE"/>
                              <input type="hidden" name="id" value={item.id}/>

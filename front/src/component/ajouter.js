@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 
-
  class Ajouter extends Component { 
   render() {
     return (
-      <div className="ajout">
-        <form action="http://localhost:8080/list" method="POST">
-          <div className="center">
-            <label>Nom</label>&nbsp;&nbsp;
-            <input id="zonetextnom" type="text" name="nom"/>&nbsp;&nbsp;
-            <label>Prenom</label>&nbsp;&nbsp;
-            <input id="zonetextnom" type="text" name="Prenom"/>&nbsp;&nbsp;
-            <button onClick={(e)=>{
-                //e.preventDefault()
-              alert("profil a bien ajoutée")}} className="btn btn-primary">Ajouter</button>
+          <div id="ajout">
+              <form action="http://localhost:8080/list" method="POST">
+            	<label>Nom &nbsp;&nbsp;</label>
+              <input id="zonetextnom" type="text" name="nom" required/>
+              <label id="nom">&nbsp;&nbsp;Prénom &nbsp;&nbsp;</label>
+              <input id="zonetextnom" type="text" name="Prenom" required/>
+              &nbsp;&nbsp;
+			        &nbsp;&nbsp;
+              <button class="btn btn-primary" id="bouttonajouter"
+            >Ajouter </button>
+              </form>
           </div>
-        </form>
-      </div>
+
     )
   }
 }
