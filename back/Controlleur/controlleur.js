@@ -32,7 +32,8 @@ exports.posterlist = function(req, res){
 
     data.push({"id": id,"nom": nom,"Prenom": prenom})
     
-    res.send(data)
+    //res.send(data)
+    res.redirect('http://localhost:3000/list');
     fs.writeFileSync('./Model/note.json', JSON.stringify(data))
 
 }
@@ -47,7 +48,8 @@ exports.editlist = function(req, res){
     var  data = JSON.parse(readfichier)
     
     for(var i=0;i<data.length;i++){
-         if(i+1==id)
+         
+         if(data[i].id==id)
          {
               if(nom)
               {
@@ -60,7 +62,8 @@ exports.editlist = function(req, res){
               }
          }         
     }
-    res.send(data)
+    //res.send(data)
+    res.redirect('http://localhost:3000/list');
    fs.writeFileSync('./Model/note.json', JSON.stringify(data))
 }
 exports.supprimerlist = function(req, res){ 
@@ -73,6 +76,7 @@ exports.supprimerlist = function(req, res){
               data.splice(i,1)   
          }     
     }
-    res.send(data)
-   fs.writeFileSync('./Model/note.json', JSON.stringify(data))
+    //res.send(data)
+     res.redirect('http://localhost:3000/list');
+     fs.writeFileSync('./Model/note.json', JSON.stringify(data))
 }
