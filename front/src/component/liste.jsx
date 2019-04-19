@@ -37,7 +37,7 @@ render() {
           </div>
         </div>
       <br/>
-      <table className="table table-bordered">
+      <table className="table table-bordered table-responsive">
         <thead className="thead-dark">
           <tr>
           <th id="th1">Id</th>
@@ -61,24 +61,7 @@ render() {
                       customUI: ({ onClose }) => {
                         return (
                           <div className='custom-ui' id="modifier">
-                           <form method="POST" action="http://localhost:8080/list?_method=PUT" enctype="application/x-www-form-urlencoded">
-                              <input type="hidden" name="_method" value="PUT"/>
-                              <table>
-                                <tr>
-                                  <td><label>Nom :</label><input id="inputmodifiernom" type="text" name="nom" placeholder={item.nom}/></td>
-                               </tr>
-                               <tr>
-                                  <td> <label>Prénom :</label><input id="inputmodifierprenom" type="text" name="Prenom" placeholder={item.Prenom}/></td>
-                               </tr>                          
-                            
-                                  <input type="hidden" name="id" value={item.id}/>
-                                    <div id="bouttonmodifier">
-                                      <button className="btn btn-primary">OK</button>&nbsp;&nbsp;
-                                      <button onClick={onClose} className="btn btn-secondary">Annuler</button>
-                                  </div>
-                              </table> 
-                            </form>
-
+                           
                           </div>
                         );
                       }

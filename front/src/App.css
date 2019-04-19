@@ -39,9 +39,6 @@ label {
   color: black;
   /* display: none; */
 }
-#listedonne {
-  list-style-type: none;  
-}
 #th1 {
   color: white;
 }
@@ -88,13 +85,7 @@ td {
   margin-left: 50px;
   margin-top: 20px;
 }
-#ajout {
-  margin-top: 50px;
-}
 #bouttonajouter {
-  margin-left: 185px;
-}
-#nom {
   margin-left: 90px;
 }
 #supprimer {
@@ -104,4 +95,7 @@ td {
   padding-top: 20px;
   width: 300px;
   height: 150px;
+}
+#containerajout{
+  margin-top: 30px;
 }
